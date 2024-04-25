@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mars Rover
+* source:	https://sketchfab.com/3d-models/mars-rover-44b41a637cc44db1aa9fbff0a1ed63fe
+* author:	hartwelkisaka (https://sketchfab.com/hartwelkisaka)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mars Rover" (https://sketchfab.com/3d-models/mars-rover-44b41a637cc44db1aa9fbff0a1ed63fe) by hartwelkisaka (https://sketchfab.com/hartwelkisaka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
