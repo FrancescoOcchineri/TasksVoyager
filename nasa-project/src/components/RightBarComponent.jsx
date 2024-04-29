@@ -6,6 +6,7 @@ import TasksMenu from './TasksMenu';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import AchievementsComponent from './AchievementsComponent';
 import wMenu from '../img/wMenu.png'
+import useAuthContext from '../context/AuthContext.jsx';
 
 const Menu = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,6 +15,7 @@ const Menu = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation();
+    const { user } = useAuthContext()
 
 
     useEffect(() => {
@@ -140,6 +142,14 @@ const Menu = () => {
                     </MDBAccordionItem>
                 </MDBAccordion>
             </div>
+            {menuOpen ? (
+                <div className='d-flex' style={{ marginTop: '57rem', position: 'absolute' }}>
+                    <img src={user.picture} alt='img profile' style={{ width: '2rem', height: '2rem', border: '1px solid white' }} />
+                    <p id='menuProfileTxt' className='ms-2'>{user.username}</p>
+                </div>
+            ) : (
+                null
+            )}
             {location.pathname === '/photos' && (
                 <Link to="/play">
                     <MDBBtn size='sm' className='mt-5' color='light' rippleColor='dark' style={{ display: menuOpen ? null : 'none' }} >

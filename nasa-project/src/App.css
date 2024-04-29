@@ -875,6 +875,25 @@ video {
     font-size: 15px;
 }
 
+.pushableP {
+    background: #083ff5;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+
+.frontP {
+    display: block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #0918eb;
+    color: white;
+    transform: translateY(-6px);
+}
+
 /* Login Page */
 
 /* Profile Page */
@@ -883,12 +902,13 @@ video {
     margin: 0 auto;
     display: inline-block;
     text-align: center;
-    padding: 20rem 40rem;
+    padding: 12.8rem 22.5rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url('');
+    background-image: url('https://i.pinimg.com/736x/1e/64/c3/1e64c3289a248160c26a3b57b221e282.jpg');
+    object-fit: fill;
 }
 
 .pixelB {
@@ -900,6 +920,21 @@ video {
 
     background-repeat: no-repeat;
     object-fit: cover;
+}
+
+#profileTxt {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    margin-left: 15%;
+    text-align: justify;
+    align-self: center;
+}
+
+#menuProfileTxt {
+    font-family: 'Press Start 2P', cursive;
+    color: white !important;
+    font-size: 12px;
+    margin-top: 0.5rem;
 }
 
 /* Profile Page */

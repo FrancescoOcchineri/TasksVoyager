@@ -60,7 +60,7 @@ export default function LoginFormComponent() {
                             <form className="flip-card__form" onSubmit={handleRegister}>
                                 <input className="flip-card__input"
                                     name="username"
-                                    placeholder="Nome utente"
+                                    placeholder="Username"
                                     type="text"
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
