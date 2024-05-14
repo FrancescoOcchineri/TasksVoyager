@@ -2,6 +2,7 @@ import React from 'react'
 import backgroundAuth from '../img/backgroundAuth.mp4'
 import useAuthContext from '../context/AuthContext.jsx';
 import { useNavigate } from 'react-router-dom';
+import picProfile from '../img/picProfile.jpg';
 
 export default function ProfileComponent() {
 
@@ -20,7 +21,7 @@ export default function ProfileComponent() {
                 <button className="pushableP" onClick={back} style={{ position: 'absolute', left: '2%', top: '5%' }}><span className="frontP">Back</span></button>
                 <button className="pushable2" onClick={logout} style={{ position: 'absolute', right: '5%', bottom: '7%' }}><span className="front2">Logout</span></button>
                 <div className='d-flex justify-content-between' style={{ position: 'absolute', left: '15%', top: '25%', width: '70%' }}>
-                    <img style={{ width: '8rem', border: '3px solid white' }} src={user.picture} alt='img profile' />
+                    <img style={{ width: '8rem', border: '3px solid white' }} src={picProfile} alt='img profile' />
                     <div id='profileTxt'>
                         <p className='text-light'><span>Username: </span><br /> {user.username}</p>
                         <p className='text-light'><span>Email: </span> {user.email}</p>

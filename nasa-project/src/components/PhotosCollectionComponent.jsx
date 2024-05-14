@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import { MDBBadge } from 'mdb-react-ui-kit';
 
@@ -14,9 +14,15 @@ export default function () {
             overflow: 'hidden',
             float: 'left',
             border: '4px solid #FFF',
-            margin: '10px',
+            margin: '2rem 2rem',
             boxShadow: '0 8px 6px -6px black'
         };
+
+        if (window.innerWidth >= 1024 && window.innerWidth <= 1600) {
+            style.width = '50px';
+            style.height = '50px';
+            style.margin = '1rem 1rem';
+        }
 
         if (marker.task.camera.full_name === 'Rear Hazard Avoidance Camera' || marker.task.camera.full_name === 'Front Hazard Avoidance Camera') {
             style.border = '4px solid #D2B353';
@@ -41,6 +47,10 @@ export default function () {
             zIndex: '2',
         }
 
+        if (window.innerWidth >= 1024 && window.innerWidth <= 1600) {
+            style.margin = '7% auto';
+        }
+
         if (marker.task.camera.full_name === 'Rear Hazard Avoidance Camera' || marker.task.camera.full_name === 'Front Hazard Avoidance Camera') {
             style.backgroundColor = '#D2B353';
         }
@@ -57,6 +67,10 @@ export default function () {
             backgroundColor: '#FFD700',
             color: 'black',
             fontSize: '17px'
+        }
+
+        if (window.innerWidth >= 1024 && window.innerWidth <= 1600) {
+            style.fontSize = '15px';
         }
 
         if (marker.task.camera.full_name === 'Rear Hazard Avoidance Camera' || marker.task.camera.full_name === 'Front Hazard Avoidance Camera') {
@@ -77,7 +91,7 @@ export default function () {
                     randomMarkers.map((marker, index) => {
                         const isMarkerInMarkers = markers.some(m => m.iconUrl === marker.iconUrl);
                         return (
-                            <section className='item' key={index} style={{ ...itemStyle(marker), filter: isMarkerInMarkers ? 'grayscale(0%)' : 'grayscale(100%)', margin: '2rem 2rem' }}>
+                            <section className='item' key={index} style={{ ...itemStyle(marker), filter: isMarkerInMarkers ? 'grayscale(0%)' : 'grayscale(100%)' }}>
                                 <a href={isMarkerInMarkers ? `#img-${index}` : undefined}>
                                     <img id={`imgMarkers-${index}`} src={marker.iconUrl} alt={`Marker ${index + 1}`} />
                                 </a>

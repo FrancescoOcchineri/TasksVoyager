@@ -64,7 +64,11 @@ const Menu = () => {
     const menuStyle = {
         width: menuOpen ? '23rem' : '0rem',
         transition: 'width 0.3s ease',
+        ...(window.innerWidth >= 1024 && window.innerWidth <= 1600 && {
+            width: menuOpen ? '20rem' : '0rem',
+        })
     };
+    
 
     const accordionStyle = {
         marginTop: '3.4rem',

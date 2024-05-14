@@ -66,13 +66,13 @@ export default function CuriosityCollectionComponent() {
                         </div>
                         <div className='control-buttons'>
                             {currentTextIndex < tutorialTexts.length - 1 && (
-                                <button type="button" className="btn btn-sm btn-danger" data-mdb-ripple-init onClick={handleSkipButtonClick}>Skip</button>
+                                <button type="button" id='skipBC' className="btn btn-sm btn-danger" data-mdb-ripple-init onClick={handleSkipButtonClick}>Skip</button>
                             )}
                             {currentTextIndex > 0 && (
                                 <button id='backB' type="button" className="btn btn-sm btn-dark" data-mdb-ripple-init onClick={handleBackButtonClick}>Back</button>
                             )}
                             {currentTextIndex < tutorialTexts.length - 1 && (
-                                <button type="button" className="btn btn-sm btn-dark" data-mdb-ripple-init onClick={handleNextButtonClick}>Next</button>
+                                <button type="button" id='nextBC' className="btn btn-sm btn-dark" data-mdb-ripple-init onClick={handleNextButtonClick}>Next</button>
                             )}
                             {currentTextIndex === tutorialTexts.length - 1 && (
                                 <button id='endB' type="button" className="btn btn-sm btn-dark" data-mdb-ripple-init onClick={handleEndButtonClick}>End</button>

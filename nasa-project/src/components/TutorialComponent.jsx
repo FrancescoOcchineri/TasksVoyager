@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import tutorial from '../img/tutorial.png';
 
 export default function TutorialComponent() {
@@ -32,10 +32,12 @@ export default function TutorialComponent() {
 
     const handleSkipButtonClick = () => {
         setShowTutorial(false);
+        localStorage.setItem('tutorial', JSON.stringify(false));
     };
 
     const handleEndButtonClick = () => {
         setShowTutorial(false);
+        localStorage.setItem('tutorial', JSON.stringify(false));
     };
 
     return (
@@ -48,13 +50,13 @@ export default function TutorialComponent() {
                     </div>
                     <div className='control-buttons'>
                         {currentTextIndex < tutorialTexts.length - 1 && (
-                            <button type="button" className="btn btn-sm btn-danger" data-mdb-ripple-init onClick={handleSkipButtonClick}>Skip Tutorial</button>
+                            <button type="button" id='skipB' className="btn btn-sm btn-danger" data-mdb-ripple-init onClick={handleSkipButtonClick}>Skip Tutorial</button>
                         )}
                         {currentTextIndex > 0 && (
                             <button id='backB' type="button" className="btn btn-sm btn-dark" data-mdb-ripple-init onClick={handleBackButtonClick}>Back</button>
                         )}
                         {currentTextIndex < tutorialTexts.length - 1 && (
-                            <button type="button" className="btn btn-sm btn-dark" data-mdb-ripple-init onClick={handleNextButtonClick}>Next</button>
+                            <button type="button" id='nextB' className="btn btn-sm btn-dark" data-mdb-ripple-init onClick={handleNextButtonClick}>Next</button>
                         )}
                         {currentTextIndex === tutorialTexts.length - 1 && (
                             <button id='endB' type="button" className="btn btn-sm btn-dark" data-mdb-ripple-init onClick={handleEndButtonClick}>End</button>

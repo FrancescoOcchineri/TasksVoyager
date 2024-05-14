@@ -506,7 +506,6 @@ video {
     transform: translate(-50%, -50%);
 }
 
-
 #gallery a {
     text-decoration: none;
 }
@@ -1031,74 +1030,187 @@ video {
         transform: translateX(-50%);
     }
 
-    /* Div Tutorial */
+    /* Loading Page */
 
-    /* .tutorial {
+    .descriptionL {
+        text-align: center;
+        transform: translateX(-50%);
+        font-family: 'Press Start 2P', cursive;
+        color: rgb(253, 178, 15);
+        text-shadow: 5px 2px 4px rgb(117, 111, 111) !important;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        font-size: 30px;
+        width: 80rem;
+    }
+
+    /* Loading Page */
+
+/* Div Tutorial */
+
+.tutorial {
     position: absolute;
     z-index: 100000;
-    width: 13rem;
+    width: 19rem;
     top: 7rem;
-    left: 1rem;
     right: 50%;
     animation: slideInTutorial 2s forwards;
 }
 
+.curiosity {
+    position: absolute;
+    z-index: 100000;
+    width: 19rem;
+    top: 7rem;
+    transform: translate(-5%);
+    opacity: 0;
+    animation: fadeInDialog 1s forwards;
+}
 
 .dialog {
-    position: relative;
+    position: absolute;
     z-index: 100000;
-    width: 250px;
-    height: 125px;
+    width: 300px;
+    height: 200px;
     background-color: #fff;
     border: 5px solid #000000;
     border-radius: 30px;
-    margin: 8rem 13rem;
-    animation: 2s forwards;
-  }
-  
-  .dialog::before,
-  .dialog::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-  }
-  
-  .dialog::before {
-    left: -30px;
-    top: 18px;
-    border-top: 30px solid transparent;
-    border-right: 30px solid #000000;
-    border-bottom: 30px solid transparent;
-  }
-  
-  .dialog::after {
-    left: -22px;
-    top: 25px;
-    border-top: 22px solid transparent;
-    border-right: 22px solid #fff;
-    border-bottom: 22px solid transparent;
-  }
-
-  @keyframes slideInTutorial {
-    from {
-        left: -15rem; 
-    }
-    to {
-        left: 1rem; 
-    }
+    margin: 8rem;
+    transform: translate(40%, 10%);
+    opacity: 0;
+    animation: fadeInDialog 1s forwards;
+    animation-delay: 2s;
 }
 
-@keyframes fadeInDialog {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-} */
+.dialogCuriosity {
+    position: absolute;
+    z-index: 100000;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 5px solid #000000;
+    border-radius: 30px;
+    margin: 8rem;
+    transform: translate(40%, 10%);
+    opacity: 0;
+    animation: fadeInDialog 1s forwards;
+}
 
-    /* Div Tutorial */
+.dialog-text {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+}
+
+.control-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+#backB {
+    position: absolute;
+    right: 6rem;
+    font-size: 10px;
+}
+
+#endB {
+    margin-left: auto;
+    font-size: 10px;
+}
+
+#nextB {
+    font-size: 10px;
+}
+
+#skipB {
+    font-size: 10px;
+}
+
+#imgTutorial {
+    width: 4rem;
+    height: 4rem;
+    margin-top: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 6px solid white;
+}
+
+#buttonCuriosity {
+    position: absolute;
+    z-index: 10000;
+    top: 7rem;
+    transform: translate(80%);
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+/* Div Tutorial */
+
+/* Collection Page */
+
+#gallery {
+    position: absolute;
+    z-index: 10;
+    width: 90rem;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+}
+
+.lightbox .title2 {
+    margin: 0;
+    padding: 0 0 10px 0px;
+    border-bottom: 1px #ccc solid;
+    font-size: 18px;
+}
+
+.lightbox .content img {
+    width: 30rem;
+    height: 30rem;
+}
+
+
+.lightbox .content .desc {
+    z-index: 99;
+    bottom: 0;
+    position: absolute;
+    padding: 10px;
+    margin: 0 0 4px 0;
+    background: rgba(0, 0, 0, 0.8);
+
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    text-align: left;
+    transition: opacity ease-in-out 0.5s;
+}
+
+.lightbox .next,
+.lightbox .prev,
+.lightbox .close {
+    display: block;
+    text-decoration: none;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #858585;
+}
+
+#nextBC {
+    font-size: 10px;
+}
+
+#skipBC {
+    font-size: 10px;
+}
+
+
+/* Collection Page */
 
 }
 
